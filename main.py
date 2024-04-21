@@ -1,24 +1,16 @@
 import sys
 import os
-
+import PyQt5
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QPushButton, QFileDialog, QMessageBox, QTextEdit, QLabel, QComboBox, QTabWidget, QTextBrowser
+sys.path.append(r'C:\Users\gofne\OneDrive\Рабочий стол\SS14Build\src\gui')
+from gui.mainwindow import TutorialWindow  # Импортируем TutorialWindow из mainwindow
+from PyQt5.QtWidgets import QApplication
+from gui.mainwindow import SS14BuilderApp
 
 pyqt5_dll_path = r'C:\PyQt5\Qt\bin' 
 if pyqt5_dll_path not in os.environ['PATH'].split(os.pathsep):
     os.environ['PATH'] += os.pathsep + pyqt5_dll_path
-
-import PyQt5
-
-from PyQt5.QtGui import QIcon
-
-# Загрузите модуль QtWidgets
-from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QPushButton, QFileDialog, QMessageBox, QTextEdit, QLabel, QComboBox, QTabWidget, QTextBrowser
-sys.path.append(r'C:\Users\gofne\OneDrive\Рабочий стол\SS14Build\src\gui')
-
-from gui.mainwindow import TutorialWindow  # Импортируем TutorialWindow из mainwindow
-
-
-from PyQt5.QtWidgets import QApplication
-from gui.mainwindow import SS14BuilderApp
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
